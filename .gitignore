@@ -1,0 +1,12 @@
+.bash_history
+.bash_logout
+.bash_profile
+.bashrc
+.cache/
+.dotnet/
+.local/
+.redhat/
+.ssh/
+.viminfo
+.vscode-server/
+ansible-key.pem
