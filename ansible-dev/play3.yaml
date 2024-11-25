@@ -1,0 +1,22 @@
+---
+- hosts: ws
+  become: 1
+  gather_facts: true
+  ignore_errors: true
+  tasks:
+    - name: Package Install
+      yum:
+        name: "{{item}}"
+        state: present
+      loop:
+        - wget
+        - finger
+        - docker
+        - ntp
+        - httpd
+        - curl
+  # tasks:
+  #   - name: Package Install
+  #     yum:
+  #       name: [ "wget" , "finger" ] #to loop through a list of items in this square
+  #       state: present

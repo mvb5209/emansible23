@@ -1,0 +1,30 @@
+---
+- hosts: ws
+  become: true
+  gather_facts: true
+  # ignore_errors: 1
+  vars:
+    user_name: eman
+    group: terraform
+  vars_files:
+    - variables.yml
+  tasks:
+    - name: check uptime of server
+      command: "{{ my_command }}"
+      register: my_uptime
+    - name: list directory
+      shell: ls
+    - name: check the kernel version
+      command: uname -r
+      register: kernel_output
+    - name: create user
+      user:
+        name: "{{user_name}}"
+    - name:
+      group:
+        name: "{{group}}"
+    - name: read data
+      debug:
+        var: user_name
+        var: kernel_output.stdout
+        var: my_uptime.stdout
