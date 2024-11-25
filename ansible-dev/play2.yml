@@ -27,4 +27,4 @@
       debug:
         var: user_name
         var: kernel_output.stdout
-        var: my_uptime.stdout
+        var: my_uptime.stdout[:19]
