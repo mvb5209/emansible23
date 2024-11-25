@@ -54,11 +54,9 @@
 
 
 
-
-
-      ---
+---
 - name: Configure Linux Hosts
-  hosts: ws, db
+  hosts: ws, db  # Only Linux groups
   become: true
   gather_facts: yes
   tasks:
@@ -118,7 +116,7 @@
         content: '<h1>This is created using Ansible</h1>'
 
 - name: Configure Windows Hosts
-  hosts: windows
+  hosts: windows  # Only Windows group
   gather_facts: no
   tasks:
     - name: Create a directory on Windows
