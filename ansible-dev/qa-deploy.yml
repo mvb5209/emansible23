@@ -14,7 +14,7 @@
       register: pid_output
 
     - name: Kill running app
-      shell: kill -9 pid_output.stdout
+      shell: kill -9 {{ pid_output.stdout }}
       when: pid_output.stdout != ''  #When not equal to nothing, run the shell command only when
 
     - name: Download New Artifact
