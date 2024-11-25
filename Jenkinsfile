@@ -18,10 +18,10 @@ pipeline{
             steps{
                 sshPublisher(publishers: [sshPublisherDesc(configName: 'AnsibleServer', \
                 transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: \
-                'ls', execTimeout: 120000, flatten: false, makeEmptyDirs: false, \
-                noDefaultExcludes: false, \ patternSeparator: '[, ]+', remoteDirectory: \
-                '/home/ec2-user', remoteDirectorySDF: false, removePrefix: '/home/ec2-user', \
-                sourceFiles: 'ansible-${BUILD_ID}.zip')], usePromotionTimestamp: false, \
+                'ls', \ execTimeout: 120000, flatten: false, makeEmptyDirs: false, \
+                noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: \
+                '/home/ec2-user', remoteDirectorySDF: false, removePrefix: '', \
+                sourceFiles: 'ansible-*.zip')], usePromotionTimestamp: false, \
                 useWorkspaceInPromotion: false, verbose: false)])
             }
         }
