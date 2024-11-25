@@ -18,4 +18,4 @@ ansible_user= ubuntu
 ansible_user=Administrator
 ansible_password=RGE$lp=)l.kgy*Vlzvl-y!js;Us7OcE*
 ansible_connection=ssh
-ansible_shell_type=cmd
+ansible_shell_type=powershell
