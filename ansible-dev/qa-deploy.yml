@@ -13,7 +13,7 @@
       shell: lsof -i :8082
       register: pid_output
 
-   - name: Kill running app
+    - name: Kill running app
      shell: kill -9 pid_output.stdout
      when: pid_output.stdout != ''  #When not equal to nothing, run the shell command only when
 
