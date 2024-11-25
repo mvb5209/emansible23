@@ -27,9 +27,9 @@
         state: touch
 
     - name: Start and enable Daemon 
-      systemd_service: 
+      service: 
         name: docker
         state: started
-        enabled: yes
+        enabled: true
 
 
