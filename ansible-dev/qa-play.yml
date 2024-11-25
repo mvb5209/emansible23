@@ -1,5 +1,5 @@
 --- 
-- host: ws
+- hosts: ws
   become: yes     
   become_user: root
   ignore_errors: yes
