@@ -10,7 +10,7 @@
         state: absent 
 
     - name: Get PID 
-      shell: lsof -i :8082 
+      shell: lsof -t -i :8082 
       tags:
         - a
       register: pid_output
